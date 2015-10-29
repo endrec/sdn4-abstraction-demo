@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.Accessors;
+import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.Index;
 import org.neo4j.ogm.annotation.NodeEntity;
 
@@ -22,6 +23,9 @@ import java.util.Set;
 @NodeEntity
 @Accessors(chain = true)
 public class User extends AbstractUuidNode<User> {
+    @GraphId
+    private Long id;
+
     @NotNull
     @Index(unique = true)
     private String email;
