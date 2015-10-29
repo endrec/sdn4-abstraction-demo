@@ -1,0 +1,12 @@
+spring:
+logging:
+  level:
+    com.example: TRACE
+    #org.springframework: DEBUG
+    org.springframework.data: DEBUG
+    org.springframework.data.neo4j.mapping.Neo4jPersistentProperty: INFO
+    org.neo4j.rest: DEBUG
+neo4j:
+    url: http://localhost:7474
+    username: neo4j
+    password: 1234
